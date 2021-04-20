@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  jupyter:
+    build: 
+      context: ./
+      dockerfile: ./docker/jupyter/Dockerfile
+    working_dir: /root/user/work
+    ports:
+      - 8888:8888
+    volumes:
+      - ./app:/root/user/app
+      - ./notebooks:/root/user/work
+      - $HOME/.config/gcloud:/root/.config/gcloud
+    command: sh -c "echo Run at http://localhost:8888/ && sh /run.sh"
+    depends_on:
+      - api
+    env_file: .env
+  api:
+    build: 
+      context: ./
+      dockerfile: ./docker/api/Dockerfile
+    ports: 
+      - 5000:5000
+    volumes:
+      - ./app:/root/app
+      - $HOME/.config/gcloud:/root/.config/gcloud
+    env_file: .env
+    command: sh -c "echo Run at http://localhost:5000/ && exec uvicorn --port 5000 --host 0.0.0.0 app.main:app --reload"

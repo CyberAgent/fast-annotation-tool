@@ -1,0 +1,16 @@
+pandas~=1.1.5
+matplotlib~=3.2.2
+google-api-python-client~=1.7
+google-auth-httplib2==0.0.4
+google-auth-oauthlib==0.4.2
+hurry==1.1
+hurry.filesize==0.9
+firebase-admin==4.4.0
+grpcio~=1.37.1
+google-cloud-firestore==1.7.0
+tqdm~=4.41
+fastapi==0.60.1
+pydantic==1.7.3
+uvicorn==0.13.4
+starlette==0.13.6
+fire==0.4.0

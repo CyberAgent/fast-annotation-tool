@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+        - ./app:/usr/src/app
+    ports:
+        - ${REACT_APP_DEV_PORT}:${REACT_APP_DEV_PORT}
+        - ${REACT_APP_PRD_PORT}:${REACT_APP_PRD_PORT}
+    command: sh -c "echo Run at http://localhost:${REACT_APP_DEV_PORT}/ && yarn run start"
+    # command: sh -c "echo Run at http://localhost:${REACT_APP_PRD_PORT}/ && yarn run start-prod"
+    stdin_open: true
+    env_file: .env

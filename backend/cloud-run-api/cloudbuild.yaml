@@ -1,0 +1,27 @@
+steps:
+  - id: kaniko_build_push
+    name: 'gcr.io/kaniko-project/executor:latest'
+    args:
+    - --destination=asia.gcr.io/${_PROJECT}/${_IMAGE}
+    - --dockerfile=${_DOCKERFILE}
+    - --context=.
+    - --cache=true
+    - --cache-ttl=6h
+    - --insecure
+  - id: deploy
+    name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+    args: ['gcloud', 'beta', 'run', 'deploy', '${_SERVICE}', '--image', 'asia.gcr.io/${_PROJECT}/${_IMAGE}',
+           '--region', '${_REGION}', '--platform', 'managed', '--memory', '2Gi', '--concurrency', '80',
+           '--allow-unauthenticated', '--update-env-vars', 'API_VERSION=${_API_VERSION},API_PROJECT_NAME=${_API_PROJECT_NAME},APP_URL=${_APP_URL}']
+timeout: 1800s
+substitutions:
+  _DOCKERFILE: './docker/api/Dockerfile'
+  _IMAGE: fast-annotation-tool-api
+  _SERVICE: fast-annotation-tool-api
+  _REGION: asia-northeast1
+  _API_VERSION: 1.0.0
+  _API_PROJECT_NAME: fast-annotation-tool-api
+  # _APP_URL: https://******.web.app
+  # _PROJECT: ******
+options:
+  substitution_option: "MUST_MATCH"

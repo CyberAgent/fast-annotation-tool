@@ -1,0 +1,167 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "annotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "task_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "created_at",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "annotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "task_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "updated_at",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users_annotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "result_data",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "user_task_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "order_index",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users_annotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "user_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "order_index",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users_annotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "user_task_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "order_index",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users_annotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "user_task_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "order_index",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users_annotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "user_task_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "result_data",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users_annotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "user_task_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "result_data",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "updated_at",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users_annotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "user_task_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "updated_at",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users_tasks",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "task_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "created_at",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users_tasks",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "user_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "created_at",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
