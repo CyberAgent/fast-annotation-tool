@@ -22,7 +22,7 @@ FAST is an annotation tool that focuses on mobile devices. It is simple to use a
 
 ## Quick Start
 
-Please refer [wiki](../../wiki/Quick-Start).
+Please refer to [wiki](../../wiki/Quick-Start).
 
 
 
