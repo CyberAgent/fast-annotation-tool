@@ -1,10 +1,10 @@
 <img src="https://user-images.githubusercontent.com/17490886/120971176-4d94df00-c7a7-11eb-87b0-60f8795fe482.png" />
 
-[Website](https://fast-annotation-tool.app)・[QuickStart](../../wiki/Quick-Start)・[Youtube](https://youtu.be/17KyKwbJ_-o)
+[Landing Page](https://fast-annotation-tool.app)・[Quick Start](../../wiki/Quick-Start)・[Video](https://youtu.be/17KyKwbJ_-o)
 
 <img src="https://user-images.githubusercontent.com/17490886/120453299-e1dcfb80-c3cd-11eb-899c-da3795d2939b.gif" alt="demo" height=550 align="right"/>
 
-## Fast Annotation tool for SmarT devices
+## FAST: Fast Annotation tool for SmarT devices
 
 FAST is an annotation tool that focuses on mobile devices. It is simple to use and fast to annotate. Also, it is designed to be serverless, so it can be operated for a long time at a low cost.
 
@@ -22,7 +22,7 @@ FAST is an annotation tool that focuses on mobile devices. It is simple to use a
 
 ## Quick Start
 
-See [here](../../wiki/Quick-Start).
+Please refer [wiki](../../wiki/Quick-Start).
 
 
 
