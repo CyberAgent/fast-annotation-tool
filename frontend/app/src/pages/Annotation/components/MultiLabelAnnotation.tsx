@@ -149,7 +149,7 @@ const MultiLabelAnnotation = forwardRef<AnswerAreaHandler>((_, ref) => {
         <div
           className={classes.annotation}
           dangerouslySetInnerHTML={{
-            __html: currentUserAnnotationSet.annotation.data.text,
+            __html: annotData.text,
           }}
         ></div>
       </Card>

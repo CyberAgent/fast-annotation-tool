@@ -11,6 +11,7 @@ import {
   MultiLabelResult,
   UserAnnotationLog,
   ActionType,
+  UserResult,
 } from "./Schemas";
 import { chunk } from "./Utils";
 
@@ -41,7 +42,7 @@ class DataController {
   postAnnotation = async (
     userTask: UserTask,
     userAnnotation: UserAnnotation,
-    resultData: CardResult | MultiLabelResult
+    resultData: UserResult
   ): Promise<void> => {
     console.log("postAnnotation", userAnnotation.order_index, resultData);
     const userAnnotationRef = this._db

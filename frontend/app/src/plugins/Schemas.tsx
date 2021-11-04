@@ -49,7 +49,7 @@ export interface UserAnnotation {
   user_id: string;
   annotation_id: string;
   user_task_id: string;
-  result_data: AnnotationResult<UserResult> | null;
+  result_data: AnnotationResult<UserSelect> | null;
   order_index: number;
   created_at: FsDate;
   updated_at: FsDate;
@@ -102,7 +102,8 @@ export interface AnnotationResult<T> {
   result: T;
 }
 
-export type UserResult = CardChoice | MultiLabelSelect;
+export type UserResult = CardResult | MultiLabelResult;
+export type UserSelect = CardChoice | MultiLabelSelect;
 
 export type CardChoice = "Yes" | "No" | "Ambiguous";
 export type CardResult = AnnotationResult<CardChoice>;
