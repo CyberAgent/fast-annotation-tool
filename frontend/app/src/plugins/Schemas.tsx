@@ -102,8 +102,8 @@ export interface AnnotationResult<T> {
   result: T;
 }
 
-export type UserResult = CardResult | MultiLabelResult | PairwiseResult;
-export type UserSelect = CardChoice | MultiLabelSelect | PairwiseSelect;
+export type UserResult = CardResult | MultiLabelResult;
+export type UserSelect = CardChoice | MultiLabelSelect;
 
 export type CardChoice = "Yes" | "No" | "Ambiguous";
 export type CardResult = AnnotationResult<CardChoice>;
