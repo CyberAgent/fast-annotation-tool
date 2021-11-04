@@ -118,8 +118,8 @@ const CardAnnotation = forwardRef<AnswerAreaHandler>((_, ref) => {
   const refNoButton = useRef<HTMLButtonElement>(null);
   const refAmbiguousButton = useRef<HTMLButtonElement>(null);
   const refYesButton = useRef<HTMLButtonElement>(null);
-  const currentAnnotationData: CardAnnotationData =
-    currentUserAnnotationSet.annotation.data;
+  const currentAnnotationData: CardAnnotationData = currentUserAnnotationSet
+    .annotation.data as CardAnnotationData;
   const preventSwipe: Direction[] = currentAnnotationData.show_ambiguous_button
     ? []
     : ["up", "down"];
@@ -277,7 +277,9 @@ const CardAnnotation = forwardRef<AnswerAreaHandler>((_, ref) => {
               <div
                 className={classes.annotation}
                 dangerouslySetInnerHTML={{
-                  __html: trimAnnotationText(userAnnotSet.annotation.data.text),
+                  __html: trimAnnotationText(
+                    (userAnnotSet.annotation.data as CardAnnotationData).text
+                  ),
                 }}
               ></div>
             </Card>
