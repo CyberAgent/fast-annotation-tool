@@ -8,7 +8,7 @@ import {
   UserAnnotation,
   UserTask,
   UserAnnotationSet,
-  UserResult,
+  UserSelect,
   UserAnnotationLog,
   ActionType,
 } from "../../plugins/Schemas";
@@ -252,7 +252,7 @@ const AnnotationPage: React.FC = () => {
   const answer = (
     userAnnotationSet: UserAnnotationSet,
     nextUserAnnotationSet?: UserAnnotationSet
-  ) => async (input: UserResult): Promise<void> => {
+  ) => async (input: UserSelect): Promise<void> => {
     console.log(
       "answer",
       currentOrderIndex,
@@ -281,7 +281,7 @@ const AnnotationPage: React.FC = () => {
     }
   };
 
-  const answerCurrent = (input: UserResult) => async (): Promise<void> => {
+  const answerCurrent = (input: UserSelect) => async (): Promise<void> => {
     const _annots: UserAnnotationSet[] = userAnnotationSets.filter(
       (annotSet) => {
         const _orderIndex = annotSet.userAnnotation.order_index;
@@ -315,6 +315,9 @@ const AnnotationPage: React.FC = () => {
       case "multi_label":
         return <MultiLabelAnnotation {...rest} />;
       default:
+        notifyErrorAndGoHome(
+          `${task.annotation_type} は対応しないアノテーションタイプです。`
+        );
         break;
     }
   };

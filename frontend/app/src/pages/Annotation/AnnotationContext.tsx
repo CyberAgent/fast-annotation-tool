@@ -5,14 +5,15 @@ import {
   UserAnnotationSet,
   MultiLabelSelect,
   ActionType,
+  UserSelect,
 } from "../../plugins/Schemas";
 
 interface AnnotationFnProps {
   answer: (
     userAnnotationSet: UserAnnotationSet,
     nextUserAnnotationSet?: UserAnnotationSet
-  ) => (input: CardChoice | MultiLabelSelect) => Promise<void>;
-  answerCurrent: (input: CardChoice | MultiLabelSelect) => () => Promise<void>;
+  ) => (input: UserSelect) => Promise<void>;
+  answerCurrent: (input: UserSelect) => () => Promise<void>;
   goBack: () => void;
 }
 
